@@ -1,6 +1,5 @@
 package in.sf.nirbhaya.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -28,13 +27,13 @@ public class NirbhayActivity extends AppCompatActivity {
     private void bindViews() {
         btn_help = (ImageView) findViewById(R.id.btn_help);
         btn_settings = (ImageView) findViewById(R.id.btn_settings);
-btn_help.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-startActivity(new Intent(NirbhayActivity.this,MainActivity.class));
-    }
-});
-      //  btn_help.setOnClickListener(helpClickListener);
+        btn_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NirbhayActivity.this, MainActivity.class));
+            }
+        });
+        btn_help.setOnClickListener(helpClickListener);
         btn_settings.setOnClickListener(settingsClickListener);
 
     }
@@ -44,8 +43,8 @@ startActivity(new Intent(NirbhayActivity.this,MainActivity.class));
         @Override
         public void onClick(View v) {
 
-            Intent intent=new Intent(NirbhayActivity.this,MainActivity.class);
-            intent.putExtra("Nirbhay",true);
+            Intent intent = new Intent(NirbhayActivity.this, MainActivity.class);
+            intent.putExtra("Nirbhay", true);
             startActivity(intent);
             finish();
 
@@ -56,7 +55,7 @@ startActivity(new Intent(NirbhayActivity.this,MainActivity.class));
 
         @Override
         public void onClick(View v) {
-            Intent intent=new Intent(NirbhayActivity.this,SettingsActivity.class);
+            Intent intent = new Intent(NirbhayActivity.this, SettingsActivity.class);
             startActivity(intent);
             finish();
         }
